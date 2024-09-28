@@ -1,0 +1,17 @@
+img{
+    height: 250px;
+    object-fit: contain;
+}
+p,h1{
+    font-weight:bold;
+}
+span{
+    font-size: 25px;
+}
+
+.message {
+    color: green; 
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  

@@ -1,0 +1,21 @@
+<div *ngIf="message" class="alert alert-success fixed-top mx-auto" style="z-index: 1050; width: 50%; text-align: center; font-size: 0.9rem; margin-top: 1rem;">
+  {{ message }}
+</div>
+
+<div class="row mt-3"> 
+  <div class="col-12 col-md-4 my-3" *ngFor="let i of data">
+    <div class="card">
+      <img [src]="i.imageUrl" class="card-img-top mt-2" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ i.title }}</h5>
+        <p class="card-text">{{ i.description }}</p>
+        <p class="card-text"><span>Price: {{ i.price }} EGP</span></p>
+        <button (click)="addToCart(i)" class="btn btn-primary">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

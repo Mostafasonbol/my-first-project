@@ -1,0 +1,26 @@
+<div class="cart container mt-3">
+  <h2>Your Cart</h2>
+  
+  <div *ngIf="items.length === 0" class="alert alert-info">Your cart is empty.</div>
+  <div *ngIf="message" class="alert alert-success fixed-top mx-auto" style="z-index: 1050; width: 50%; text-align: center; font-size: 0.9rem; margin-top: 1rem;">
+    {{ message }}
+  </div>
+
+  <div class="row">
+    <div *ngFor="let item of items" class="col-md-4">
+      <div class="card mb-4">
+        <img [src]="item.imageUrl" alt="{{ item.title }}" class="card-img-top item-image" />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <p class="card-price">Price: {{ item.price }} EGP</p>
+          <button (click)="deleteItem(item)" class="btn btn-danger">Delete</button>
+          <button (click)="goToPurchase(item)" class="btn btn-primary mx-3">Purchase</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button (click)="clearCart()" class="btn btn-danger" *ngIf="items.length > 0">Clear Cart</button>
+</div>
+

@@ -1,0 +1,13 @@
+.item-image {
+    height: 250px;
+    object-fit: contain;
+  }
+button{
+  width: 150px;
+}
+
+.message {
+  color: green; 
+  font-weight: bold;
+  margin: 10px 0;
+}
